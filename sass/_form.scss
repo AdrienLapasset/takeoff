@@ -1,0 +1,97 @@
+.form {
+  background-image: url("/assets/imgs/form-bg.svg");
+  background-size: cover;
+  background-position: top center;
+  padding: 60px 0;
+
+  .form-container {
+    background-color: white;
+    border-radius: 26px;
+    max-width: 980px;
+    margin: auto;
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+    .progress-bar-container {
+      height: 2px;
+      width: 100%;
+      background-color: #ebf1f4;
+      .progress-bar {
+        width: 15%;
+        height: 2px;
+        background-color: $brand;
+        transition: width 0.2s;
+      }
+    }
+    .tab-content {
+      font-size: 12px;
+      h1 {
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+      }
+      .instruction {
+        color: grey;
+        font-size: 13px;
+        text-align: center;
+      }
+      .custom-radio {
+        .custom-control-label::before {
+          border-radius: 7px;
+          border: 1px solid $grey;
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .custom-control-input:checked ~ .custom-control-label::before {
+        background-color: transparent;
+      }
+      .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+        content: "";
+        background-image: none;
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        background-color: $orange;
+        top: 10px;
+        left: -18px;
+      }
+      .custom-control-label {
+        padding: 5px;
+      }
+    }
+    .form-content {
+      padding: 40px 140px;
+    }
+  }
+  .form-control {
+    border-radius: 16px;
+    border-color: $grey;
+    font-size: 12px;
+    height: 43px;
+    width: 280px;
+    &:focus {
+      border-color: $brand;
+      outline: none;
+      box-shadow: none;
+    }
+    &::-webkit-input-placeholder {
+      color: $grey;
+    }
+  }
+
+  h2 {
+    font-size: 13px;
+  }
+  .form-footer {
+    border-top: 2px solid $grey-light;
+    padding: 10px 140px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .back-btn {
+    color: $brand;
+  }
+}

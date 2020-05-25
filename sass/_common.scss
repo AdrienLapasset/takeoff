@@ -1,0 +1,33 @@
+.btn {
+  border-radius: 19px;
+  height: 49px;
+  padding: 0 30px;
+  font-size: 14px;
+  color: white;
+}
+
+.btn-primary {
+  border: none;
+  background-color: $brand;
+  box-shadow: 0 10px 20px 0 rgba(137, 58, 227, 0.28);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: $orange;
+  border-color: $orange;
+  border-width: 2px;
+}
+
+.btn-form {
+  border: none;
+  background-color: $orange;
+  box-shadow: 0 10px 20px 0 rgba(255, 124, 0, 0.28);
+  &:disabled {
+    background-color: $orange;
+  }
+}
+
+.brand-logo {
+  max-height: 70px;
+}
