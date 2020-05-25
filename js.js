@@ -10,25 +10,40 @@ $(document).ready(function () {
     $('.progress-bar').css("width", "100%")
   })
 
-  // Form validation
-  let form1 = document.getElementById('form1');
-  form1.querySelectorAll('.form-control[required]').forEach(input => {
-    input.addEventListener(('input'), () => {
-      if (input.checkValidity()) {
-        input.classList.remove('is-invalid')
-        input.classList.add('is-valid');
-      } else {
-        input.classList.remove('is-valid')
-        input.classList.add('is-invalid');
-      }
-      var is_valid = $('.form-control[required]').length === $('.form-control[required].is-valid').length;
-      $("#submitBtn").attr("disabled", !is_valid);
-    });
-  });
+  document.querySelectorAll('.form-step').forEach((form, id) => {
+    let step = id + 1
+    checkValidity(form, step)
+  })
 
-  $(document).on('submit', '#form1', function () {
+  function checkValidity(form, step) {
+    form.querySelectorAll('.form-control[required]').forEach(input => {
+      input.addEventListener(('input'), () => {
+        if (input.checkValidity()) {
+          input.classList.remove('is-invalid')
+          input.classList.add('is-valid');
+        } else {
+          input.classList.remove('is-valid')
+          input.classList.add('is-invalid');
+        }
+        let is_valid = $('#form' + step + ' .form-control[required]').length === $('#form' + step + ' .form-control[required].is-valid').length;
+        $('#submitBtn' + step).attr("disabled", !is_valid);
+      });
+    })
+  }
+
+  $(document).on('submit', '#form1', () => {
     $('#tab2').tab('show')
     $('.progress-bar').css("width", "50%")
+    $('#acount-icon').addClass("icon-grey")
+    $('#shop-icon').css("display", "block")
+    $('#shop-text').css("display", "none")
+    window.scrollTo(0, 0);
+    return false;
+  });
+
+  $(document).on('submit', '#form2', () => {
+    $('#tab3').tab('show')
+    $('.progress-bar').css("width", "100%")
     return false;
   });
 

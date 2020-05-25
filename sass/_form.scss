@@ -13,6 +13,16 @@
       display: flex;
       justify-content: space-around;
       padding: 10px 0;
+      .icon-grey {
+        fill: $grey;
+        stroke: $grey;
+      }
+      #shop-icon {
+        display: none;
+      }
+      .nav-item {
+        text-align: center;
+      }
     }
     .progress-bar-container {
       height: 2px;

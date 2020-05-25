@@ -25,6 +25,10 @@ a {
   color: white;
 }
 
+.btn:hover {
+  color: white;
+}
+
 .btn-primary {
   border: none;
   background-color: #893ae3;
@@ -169,6 +173,19 @@ footer .copyrights {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 10px 0;
+}
+
+.form .form-container .nav .icon-grey {
+  fill: #cdd6de;
+  stroke: #cdd6de;
+}
+
+.form .form-container .nav #shop-icon {
+  display: none;
+}
+
+.form .form-container .nav .nav-item {
+  text-align: center;
 }
 
 .form .form-container .progress-bar-container {
