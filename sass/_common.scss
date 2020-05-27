@@ -4,6 +4,8 @@
   padding: 0 30px;
   font-size: 14px;
   color: white;
+  display: flex;
+  align-items: center;
   &:hover {
     color: white;
   }
@@ -13,6 +15,9 @@
   border: none;
   background-color: $brand;
   box-shadow: 0 10px 20px 0 rgba(137, 58, 227, 0.28);
+  &:hover {
+    background-color: $brand;
+  }
 }
 
 .btn-secondary {
@@ -20,6 +25,11 @@
   color: $orange;
   border-color: $orange;
   border-width: 2px;
+  &:hover {
+    background: transparent;
+    color: $orange;
+    border-color: $orange;
+  }
 }
 
 .btn-form {

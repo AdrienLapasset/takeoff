@@ -17,12 +17,23 @@ a {
   color: #24285b;
 }
 
+a.nav-link:hover {
+  color: #24285b;
+  text-decoration: underline;
+}
+
 .btn {
   border-radius: 19px;
   height: 49px;
   padding: 0 30px;
   font-size: 14px;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .btn:hover {
@@ -36,11 +47,21 @@ a {
           box-shadow: 0 10px 20px 0 rgba(137, 58, 227, 0.28);
 }
 
+.btn-primary:hover {
+  background-color: #893ae3;
+}
+
 .btn-secondary {
   background: transparent;
   color: #ff7c00;
   border-color: #ff7c00;
   border-width: 2px;
+}
+
+.btn-secondary:hover {
+  background: transparent;
+  color: #ff7c00;
+  border-color: #ff7c00;
 }
 
 .btn-form {
@@ -108,7 +129,7 @@ header .navbar .home-icon::after {
 
 .home p {
   max-width: 400px;
-  color: #cdd6de;
+  color: #728393;
   line-height: 24px;
 }
 
@@ -127,7 +148,7 @@ footer h2 {
 
 footer li {
   font-size: 13px;
-  color: #cdd6de;
+  color: #728393;
 }
 
 footer .social-btn {
@@ -148,7 +169,7 @@ footer .social-btn {
 }
 
 footer .copyrights {
-  color: #cdd6de;
+  color: #728393;
   font-size: 12px;
 }
 
