@@ -28,8 +28,11 @@ header {
   padding: 40px 0 140px;
   margin-bottom: 50px;
   h1 {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 700;
+    @media (min-width: 992px) {
+      font-size: 35px;
+    }
     span {
       color: $orange;
     }
@@ -50,6 +53,10 @@ footer {
     letter-spacing: 1px;
     line-height: 12px;
     margin-bottom: 19px;
+    margin-top: 15px;
+    @media (min-width: 992px) {
+      margin-top: 0px;
+    }
   }
   li {
     font-size: 13px;
