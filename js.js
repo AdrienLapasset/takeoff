@@ -1,22 +1,14 @@
 $(document).ready(function () {
 
-  $('#tab1').click(function () {
-    $('.progress-bar').css("width", "15%")
-  })
-  $('#tab2').click(function () {
-    $('.progress-bar').css("width", "50%")
-  })
-  $('#tab3').click(function () {
-    $('.progress-bar').css("width", "100%")
-  })
-
   document.querySelectorAll('.form-step').forEach((form, id) => {
     let step = id + 1
     checkValidity(form, step)
   })
 
   function checkValidity(form, step) {
-    form.querySelectorAll('.form-control[required]').forEach(input => {
+    form.querySelectorAll('input[required]').forEach(input => {
+      console.log(input)
+
       input.addEventListener(('input'), () => {
         if (input.checkValidity()) {
           input.classList.remove('is-invalid')
@@ -25,7 +17,7 @@ $(document).ready(function () {
           input.classList.remove('is-valid')
           input.classList.add('is-invalid');
         }
-        let is_valid = $('#form' + step + ' .form-control[required]').length === $('#form' + step + ' .form-control[required].is-valid').length;
+        let is_valid = $('#form' + step + ' input[required]').length === $('#form' + step + ' input[required].is-valid').length;
         $('#submitBtn' + step).attr("disabled", !is_valid);
       });
     })
@@ -43,8 +35,46 @@ $(document).ready(function () {
 
   $(document).on('submit', '#form2', () => {
     $('#tab3').tab('show')
-    $('.progress-bar').css("width", "100%")
+    $('.progress-bar').css("width", "83%")
+    $('#shop-icon').addClass("icon-grey")
+    $('#validation-icon').css("display", "block")
+    $('#validation-text').css("display", "none")
+    window.scrollTo(0, 0);
     return false;
+  });
+
+  $(document).on('submit', '#form3', () => {
+    $('.form-container').hide()
+    $('#feedback').show()
+    window.scrollTo(0, 0);
+    return false;
+  });
+
+
+  // File upload drag and drop
+  // https://makitweb.com/drag-and-drop-file-upload-with-jquery-and-ajax/
+  $("html").on("dragover", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  });
+
+  $("html").on("drop", function (e) { e.preventDefault(); e.stopPropagation(); });
+
+  $('.file-upload').on('dragover', function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+    $(".file-upload").addClass("drag-over");
+  });
+
+  $('.file-upload').on('dragleave', function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+    $(".file-upload").removeClass("drag-over");
+  });
+
+  $(".file-upload .btn").click(function () {
+    $("#file").click();
+    console.log('toto')
   });
 
 })
