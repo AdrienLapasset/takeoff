@@ -15,6 +15,11 @@ li {
 
 a {
   color: $black;
+  cursor: pointer;
+  &:hover {
+    color: $black;
+    text-decoration: underline;
+  }
   &.nav-link {
     &:hover {
       color: $black;

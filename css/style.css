@@ -15,6 +15,12 @@ li {
 
 a {
   color: #24285b;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #24285b;
+  text-decoration: underline;
 }
 
 a.nav-link:hover {
@@ -88,6 +94,11 @@ header .navbar {
 
 header .navbar .nav-link {
   margin-left: 80px;
+  position: relative;
+}
+
+header .navbar .nav-link.contact:hover .contact-popup {
+  display: block;
 }
 
 header .navbar .home-icon {
@@ -111,6 +122,53 @@ header .navbar .home-icon::after {
   height: 5px;
   border-radius: 5px;
   background-color: #893ae3;
+}
+
+header .contact-popup {
+  display: none;
+  position: absolute;
+  background-color: white;
+  -webkit-box-shadow: 0 7px 34px 0 rgba(114, 131, 147, 0.21);
+          box-shadow: 0 7px 34px 0 rgba(114, 131, 147, 0.21);
+  border-radius: 10px;
+  width: 430px;
+  right: 0;
+  top: 45px;
+  padding: 30px 0;
+  z-index: 1;
+  line-height: 18px;
+}
+
+header .contact-popup::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 32px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid white;
+}
+
+header .contact-popup .icon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: 0 20px;
+  background-color: #893ae3;
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 35px;
 }
 
 .home {
