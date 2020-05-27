@@ -74,8 +74,8 @@
               consectetur adipiscing elit.</p>
           </div>
           <div class="d-flex flex-column flex-lg-row mb-2 mb-lg-0">
-            <a href="form.html" class="btn btn-primary mr-lg-3 mb-4 mb-lg-0">Je tente ma chance !</a>
-            <button class="btn btn-secondary">Comment participer ?</button>
+            <a href="form.html" class="btn btn-primary mr-lg-3 mb-4 mb-lg-0">Je tente ma chance&nbsp;!</a>
+            <button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#howToModal">Comment participer&nbsp;?</button>
           </div>
         </div>
         <div class="col-lg-6">
@@ -83,6 +83,49 @@
         </div>
       </div>
     </div>
+
+    <!-- MODAL Comment participer ?  -->
+    <div class="modal fade" id="howToModal" tabindex="-1" role="dialog" aria-labelledby="howToModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <img class="mb-2" src="/assets/icons/close.svg" alt="">
+          Fermer
+        </button>
+        <div class="modal-content">
+          <h5 class="modal-title" id="exampleModalLabel">Comment participer&nbsp;?</h5>
+          <div class="steps d-flex justify-content-between flex-column flex-lg-row">
+            <div class="d-flex flex-column align-items-center mb-4 mb-lg-0">
+              <img src="/assets/imgs/coordonnees.svg" alt="">
+              <div class="step">1</div>
+              <p>Je renseigne<br />
+                mes <b>coordonnées complètes</b> </p>
+            </div>
+            <div class="d-flex flex-column align-items-center mb-4 mb-lg-0">
+              <img src="/assets/imgs/preuves.svg" alt="">
+              <div class="step">2</div>
+              <p>Je joins<br />
+                mes<b>preuves d’achat</b> </p>
+            </div>
+            <div class="d-flex flex-column align-items-center mb-4 mb-lg-0">
+              <img src="/assets/imgs/demande.svg" alt="">
+              <div class="step">3</div>
+              <p>Je valide<br />
+                ma <b>demande</b></p>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+              <img src="/assets/imgs/remboursement.svg" alt="">
+              <div class="step">4</div>
+              <p>J’obtiens mon <b>remboursement</b><br />
+                si ma demande est conforme</p>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary">Voir les modalités<br>
+            de l’offre</button>
+        </div>
+      </div>
+    </div>
+    <!-- End MODAL Comment participer ?  -->
+
   </div>
   <footer>
     <div class="container">

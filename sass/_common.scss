@@ -31,6 +31,12 @@
     color: $orange;
     border-color: $orange;
   }
+  &:focus {
+    background: transparent;
+    color: $orange;
+    border-color: $orange;
+    box-shadow: unset;
+  }
 }
 
 .btn-form {

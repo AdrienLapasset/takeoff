@@ -98,6 +98,77 @@ header {
     color: $grey-dark;
     line-height: 24px;
   }
+  .modal {
+    background-color: rgba(73, 22, 131, 0.8);
+    .modal-dialog {
+      @media (min-width: 992px) {
+        max-width: 980px;
+      }
+    }
+    .close {
+      color: white;
+      font-size: 12px;
+      text-shadow: none;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      right: -70px;
+      opacity: 1;
+      cursor: pointer;
+    }
+    .modal-content {
+      padding: 40px 80px;
+      border-radius: 26px;
+      display: flex;
+      align-items: center;
+      h5 {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .steps {
+        margin-bottom: 40px;
+        width: 100%;
+        & > * {
+          &:first-child img {
+            margin-bottom: -30px;
+          }
+          &:nth-child(2) img {
+            margin-bottom: -10px;
+          }
+          &:nth-child(3) img {
+            margin-bottom: 27px;
+          }
+          &:nth-child(4) img {
+            margin-bottom: 42px;
+          }
+        }
+      }
+
+      p {
+        color: $black;
+        font-size: 13px;
+        text-align: center;
+        line-height: 17px;
+        margin-top: 15px;
+      }
+      .step {
+        height: 32px;
+        width: 32px;
+        border: 2px solid $grey;
+        border-radius: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn {
+        height: 58px;
+      }
+    }
+  }
 }
 
 footer {

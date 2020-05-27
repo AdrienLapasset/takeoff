@@ -73,6 +73,14 @@ a.nav-link:hover {
   border-color: #ff7c00;
 }
 
+.btn-secondary:focus {
+  background: transparent;
+  color: #ff7c00;
+  border-color: #ff7c00;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
 .btn-form {
   border: none;
   background-color: #ff7c00;
@@ -215,6 +223,104 @@ header .contact-popup .icon {
   max-width: 400px;
   color: #728393;
   line-height: 24px;
+}
+
+.home .modal {
+  background-color: rgba(73, 22, 131, 0.8);
+}
+
+@media (min-width: 992px) {
+  .home .modal .modal-dialog {
+    max-width: 980px;
+  }
+}
+
+.home .modal .close {
+  color: white;
+  font-size: 12px;
+  text-shadow: none;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: -70px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.home .modal .modal-content {
+  padding: 40px 80px;
+  border-radius: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .modal .modal-content h5 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home .modal .modal-content .steps {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.home .modal .modal-content .steps > *:first-child img {
+  margin-bottom: -30px;
+}
+
+.home .modal .modal-content .steps > *:nth-child(2) img {
+  margin-bottom: -10px;
+}
+
+.home .modal .modal-content .steps > *:nth-child(3) img {
+  margin-bottom: 27px;
+}
+
+.home .modal .modal-content .steps > *:nth-child(4) img {
+  margin-bottom: 42px;
+}
+
+.home .modal .modal-content p {
+  color: #24285b;
+  font-size: 13px;
+  text-align: center;
+  line-height: 17px;
+  margin-top: 15px;
+}
+
+.home .modal .modal-content .step {
+  height: 32px;
+  width: 32px;
+  border: 2px solid #cdd6de;
+  border-radius: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .modal .modal-content .btn {
+  height: 58px;
 }
 
 footer {
