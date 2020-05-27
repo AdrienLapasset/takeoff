@@ -77,4 +77,8 @@ $(document).ready(function () {
     console.log('toto')
   });
 
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
 })

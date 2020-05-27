@@ -96,6 +96,31 @@ a.nav-link:hover {
   max-height: 70px;
 }
 
+.custom-tooltip {
+  padding-top: 5px;
+}
+
+.tooltip .tooltip-inner {
+  opacity: 1;
+  background-color: white;
+  -webkit-box-shadow: 0 7px 34px 0 rgba(114, 131, 147, 0.21);
+          box-shadow: 0 7px 34px 0 rgba(114, 131, 147, 0.21);
+  border-radius: 10px;
+  color: #24285b;
+  max-width: 436px;
+  padding: 20px 20px 10px;
+  text-align: left;
+  font-size: 11px;
+}
+
+.tooltip.show {
+  opacity: 1;
+}
+
+.tooltip .arrow:before {
+  border-top-color: white;
+}
+
 header .navbar {
   padding: 0;
 }
@@ -106,7 +131,8 @@ header .navbar .nav-link {
 }
 
 header .navbar .nav-link.contact:hover .contact-popup {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 header .navbar .home-icon {
@@ -133,7 +159,10 @@ header .navbar .home-icon::after {
 }
 
 header .contact-popup {
-  display: none;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   background-color: white;
   -webkit-box-shadow: 0 7px 34px 0 rgba(114, 131, 147, 0.21);
@@ -620,5 +649,9 @@ footer .copyrights {
 .form #feedback {
   max-width: 700px;
   display: none;
+}
+
+.form h3 {
+  font-size: 13px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -7,7 +7,8 @@ header {
       &.contact {
         &:hover {
           .contact-popup {
-            display: block;
+            visibility: visible;
+            opacity: 1;
           }
         }
       }
@@ -28,7 +29,9 @@ header {
     }
   }
   .contact-popup {
-    display: none;
+    transition: opacity 0.2s;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     background-color: white;
     box-shadow: 0 7px 34px 0 rgba(114, 131, 147, 0.21);

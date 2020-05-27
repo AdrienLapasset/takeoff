@@ -195,9 +195,22 @@
 
                 <div class="d-flex flex-column flex-lg-row justify-content-between">
                   <div class="d-flex flex-column">
-                    <h2 class="mt-5 mb-3">Remplissez vos informations bancaires :</h2>
+                    <h3 class="mt-5 mb-3">Remplissez vos informations bancaires :</h3>
                     <div class="form-group">
-                      <label for="firstName">IBAN</label>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <label class="mb-0">IBAN</label>
+                        <img class="custom-tooltip" data-toggle="tooltip" data-placement="top" data-html="true" title="
+                        <p>Votre remboursement sera effectué par <b>virement bancaire</b>. 
+                        Merci d’indiquer votre IBAN figurant sur votre RIB.</p>
+                        <p>Un IBAN/BIC permet uniquement d’effectuer des virements sur votre compte. Ce site garantit la <b>protection de des informations</b> saisies (vos données sont chiffrées puis envoyées de manière sécurisée au serveur).</p>
+                        <p>Vos coordonnées seront uniquement utilisées pour répondre à votre demande et ne seront ni stockées, ni utilisées à d’autres fins.</p>" src="/assets/icons/info.svg" alt="">
+                        <!-- <div class="tooltip bs-tooltip-top" role="tooltip">
+                          <div class="arrow"></div>
+                          <div class="tooltip-inner">
+                            Some tooltip text!
+                          </div>
+                        </div> -->
+                      </div>
                       <input placeholder="Ex : France" type="text" class="form-control" id="firstName">
                       <div class="invalid-feedback">
                         Exemple 0615839278
@@ -515,6 +528,7 @@
   </footer>
 
   <!-- JS Library -->
+
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
