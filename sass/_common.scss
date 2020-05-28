@@ -56,6 +56,31 @@
   padding-top: 5px;
 }
 
+// Form
+form {
+  .form-control {
+    border-radius: 16px;
+    border-color: $grey;
+    font-size: 12px;
+    width: 280px;
+    resize: none;
+    &:focus {
+      border-color: $brand;
+      outline: none;
+      box-shadow: none;
+    }
+    &::-webkit-input-placeholder {
+      color: $grey;
+    }
+    &:not(textarea) {
+      height: 43px;
+    }
+  }
+  label {
+    font-size: 12px;
+  }
+}
+
 .tooltip {
   .tooltip-inner {
     opacity: 1;

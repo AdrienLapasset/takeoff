@@ -100,6 +100,33 @@ a.nav-link:hover {
   padding-top: 5px;
 }
 
+form .form-control {
+  border-radius: 16px;
+  border-color: #cdd6de;
+  font-size: 12px;
+  width: 280px;
+  resize: none;
+}
+
+form .form-control:focus {
+  border-color: #893ae3;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+form .form-control::-webkit-input-placeholder {
+  color: #cdd6de;
+}
+
+form .form-control:not(textarea) {
+  height: 43px;
+}
+
+form label {
+  font-size: 12px;
+}
+
 .tooltip .tooltip-inner {
   opacity: 1;
   background-color: white;
@@ -420,7 +447,7 @@ footer .copyrights {
 }
 
 .form .form-container .instruction {
-  color: grey;
+  color: #728393;
   font-size: 13px;
   text-align: center;
 }
@@ -499,29 +526,6 @@ footer .copyrights {
 
 .form .form-container .form-content {
   padding: 40px 140px;
-}
-
-.form .form-control {
-  border-radius: 16px;
-  border-color: #cdd6de;
-  font-size: 12px;
-  width: 280px;
-  resize: none;
-}
-
-.form .form-control:focus {
-  border-color: #893ae3;
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.form .form-control::-webkit-input-placeholder {
-  color: #cdd6de;
-}
-
-.form .form-control:not(textarea) {
-  height: 43px;
 }
 
 .form .custom-select {
@@ -653,5 +657,55 @@ footer .copyrights {
 
 .form h3 {
   font-size: 13px;
+}
+
+.login {
+  background-image: url("/assets/imgs/login-bg.svg");
+  background-size: cover;
+  background-position: top center;
+  padding: 60px 0;
+}
+
+.login .login-container {
+  background-color: white;
+  border-radius: 26px;
+  max-width: 620px;
+  margin: auto;
+  padding: 40px;
+}
+
+.login .login-container h1 {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.login .login-container .instruction {
+  color: #728393;
+  font-size: 13px;
+  text-align: center;
+}
+
+.login .login-container .instruction .orange {
+  color: #ff7c00;
+}
+
+.login .login-container .login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login .login-container .login-form .form-link {
+  color: orange;
+  text-decoration: underline;
+  font-size: 10px;
 }
 /*# sourceMappingURL=style.css.map */

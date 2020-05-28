@@ -15,7 +15,7 @@
       text-align: center;
     }
     .instruction {
-      color: grey;
+      color: $grey-dark;
       font-size: 13px;
       text-align: center;
       .orange {
@@ -80,24 +80,6 @@
     }
     .form-content {
       padding: 40px 140px;
-    }
-  }
-  .form-control {
-    border-radius: 16px;
-    border-color: $grey;
-    font-size: 12px;
-    width: 280px;
-    resize: none;
-    &:focus {
-      border-color: $brand;
-      outline: none;
-      box-shadow: none;
-    }
-    &::-webkit-input-placeholder {
-      color: $grey;
-    }
-    &:not(textarea) {
-      height: 43px;
     }
   }
   .custom-select {

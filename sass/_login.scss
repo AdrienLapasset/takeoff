@@ -1,0 +1,38 @@
+.login {
+  background-image: url("/assets/imgs/login-bg.svg");
+  background-size: cover;
+  background-position: top center;
+  padding: 60px 0;
+
+  .login-container {
+    background-color: white;
+    border-radius: 26px;
+    max-width: 620px;
+    margin: auto;
+    padding: 40px;
+
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .instruction {
+      color: $grey-dark;
+      font-size: 13px;
+      text-align: center;
+      .orange {
+        color: $orange;
+      }
+    }
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .form-link {
+        color: orange;
+        text-decoration: underline;
+        font-size: 10px;
+      }
+    }
+  }
+}
