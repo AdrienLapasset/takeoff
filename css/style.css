@@ -127,6 +127,17 @@ form label {
   font-size: 12px;
 }
 
+form .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #893ae3;
+  border-color: #893ae3;
+}
+
+form .custom-checkbox .custom-control-label {
+  color: #728393;
+  padding: 3px;
+  cursor: pointer;
+}
+
 .tooltip .tooltip-inner {
   opacity: 1;
   background-color: white;
@@ -639,17 +650,6 @@ footer .copyrights {
           flex: 0 0 40%;
 }
 
-.form .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  background-color: #893ae3;
-  border-color: #893ae3;
-}
-
-.form .custom-checkbox .custom-control-label {
-  color: #728393;
-  padding: 3px;
-  cursor: pointer;
-}
-
 .form #feedback {
   max-width: 700px;
   display: none;
@@ -707,5 +707,48 @@ footer .copyrights {
   color: orange;
   text-decoration: underline;
   font-size: 10px;
+}
+
+.login .nav-tabs {
+  border: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login .nav-tabs .nav-link {
+  border: none;
+  padding: 10px 60px;
+  color: #728393;
+}
+
+.login .nav-tabs .nav-link.active {
+  color: #24285b;
+}
+
+.login .tab-content {
+  background-color: white;
+  border-radius: 10px;
+  padding: 70px;
+  -webkit-box-shadow: 0 12px 80px 0 rgba(114, 131, 147, 0.12);
+          box-shadow: 0 12px 80px 0 rgba(114, 131, 147, 0.12);
+}
+
+.login .tab-content .tab-pane {
+  min-height: 300px;
+}
+
+.login .tab-content h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login .tab-content li {
+  font-size: 13px;
+  color: #728393;
+}
+
+.login .tab-content li span {
+  color: #24285b;
 }
 /*# sourceMappingURL=style.css.map */

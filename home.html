@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Take Off</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <img src="/assets/imgs/random-logo.svg" class="brand-logo" alt="">
+        <button class="btn btn-primary navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a href="" class="nav-item nav-link home-icon">
+              <img src="/assets/icons/home.svg" alt="">
+            </a>
+            <a class="nav-item nav-link" href="#">Modalités</a>
+            <a class="nav-item nav-link" href="login.html">Ma participation</a>
+            <span class="nav-item nav-link contact" href="#">Contacts
+              <div class="contact-popup">
+                <div class="d-flex  mb-2">
+                  <div class="icon">
+                    <img src="/assets/icons/email.svg" alt="">
+                  </div>
+                  <p><b>Par mail : <a href="mailto:name@email.com">service consommateur</a> </b><br />
+                    en précisant le numéro de l’offre<br />
+                    et le numéro de participation.
+                  </p>
+                </div>
+                <div class="d-flex mb-2">
+                  <div class="icon">
+                    <img src="/assets/icons/courrier.svg" alt="">
+                  </div>
+                  <p><b>Par courrier :</b><br />
+                    TAKE OFF N° XXXX<br />
+                    à l’attention du service consommateur<br />
+                    CS 50454<br />
+                    13096 Aix-en-Provence Cedex 2
+                  </p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="icon">
+                    <img src="/assets/icons/tel.svg" alt="">
+                  </div>
+                  <p class="mb-0"><b>Par téléphone</b> : 04 84 49 29 00
+                  </p>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="home">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center align-items-lg-start">
+          <div>
+            <h1>Vos achats valent<br />
+              bien des <span>cadeaux.</span>
+            </h1>
+            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet
+              consectetur adipiscing elit.</p>
+          </div>
+          <div class="d-flex flex-column flex-lg-row mb-2 mb-lg-0">
+            <a href="form.html" class="btn btn-primary mr-lg-3 mb-4 mb-lg-0">Je tente ma chance&nbsp;!</a>
+            <button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#howToModal">Comment participer&nbsp;?</button>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img class="img-fluid" src="/assets/imgs/home-visuel.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL Comment participer ?  -->
+    <div class="modal fade" id="howToModal" tabindex="-1" role="dialog" aria-labelledby="howToModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <img class="mb-2" src="/assets/icons/close.svg" alt="">
+          Fermer
+        </button>
+        <div class="modal-content">
+          <h5 class="modal-title" id="exampleModalLabel">Comment participer&nbsp;?</h5>
+          <div class="steps d-flex justify-content-between flex-column flex-lg-row">
+            <div class="d-flex flex-column align-items-center mb-4 mb-lg-0">
+              <img src="/assets/imgs/coordonnees.svg" alt="">
+              <div class="step">1</div>
+              <p>Je renseigne<br />
+                mes <b>coordonnées complètes</b> </p>
+            </div>
+            <div class="d-flex flex-column align-items-center mb-4 mb-lg-0">
+              <img src="/assets/imgs/preuves.svg" alt="">
+              <div class="step">2</div>
+              <p>Je joins<br />
+                mes<b>preuves d’achat</b> </p>
+            </div>
+            <div class="d-flex flex-column align-items-center mb-4 mb-lg-0">
+              <img src="/assets/imgs/demande.svg" alt="">
+              <div class="step">3</div>
+              <p>Je valide<br />
+                ma <b>demande</b></p>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+              <img src="/assets/imgs/remboursement.svg" alt="">
+              <div class="step">4</div>
+              <p>J’obtiens mon <b>remboursement</b><br />
+                si ma demande est conforme</p>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary">Voir les modalités<br>
+            de l’offre</button>
+        </div>
+      </div>
+    </div>
+    <!-- End MODAL Comment participer ?  -->
+
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>GAME OFF</h2>
+          <ul>
+            <li>CS 50454</li>
+            <li>Aix-en-Provence Cedex 2</li>
+            <li>FRANCE</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>LIENS UTILES</h2>
+          <ul>
+            <li>
+              Ma participation
+            </li>
+            <li>Mentions légales
+            </li>
+            <li>Politique de confidentialité</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>CONTACTS</h2>
+          <ul>
+            <li>service.consommateur@take-off.fr</li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-5">
+        <div class="d-flex">
+          <a class="social-btn" href="">
+            <img src="/assets/icons/facebook.svg" alt="">
+          </a>
+          <a class="social-btn" href="">
+            <img src="/assets/icons/twitter.svg" alt="">
+          </a>
+          <a class="social-btn" href="">
+            <img src="/assets/icons/linkedin.svg" alt="">
+          </a>
+          <a class="social-btn" href="">
+            <img src="/assets/icons/google+.svg" alt="">
+          </a>
+        </div>
+        <p class="copyrights mt-3 mt-md-0">©
+          <script>document.write(new Date().getFullYear())</script>
+          Tous droits réservés Take off</p>
+        <img src="/assets/imgs/random-logo.svg" class="brand-logo" alt="">
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Library -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -79,6 +79,17 @@ form {
   label {
     font-size: 12px;
   }
+  .custom-checkbox {
+    .custom-control-input:checked ~ .custom-control-label::before {
+      background-color: $brand;
+      border-color: $brand;
+    }
+    .custom-control-label {
+      color: $grey-dark;
+      padding: 3px;
+      cursor: pointer;
+    }
+  }
 }
 
 .tooltip {
