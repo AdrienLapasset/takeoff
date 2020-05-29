@@ -40,8 +40,11 @@
     justify-content: center;
     .nav-link {
       border: none;
-      padding: 10px 60px;
       color: $grey-dark;
+      padding: 10px 40px;
+      @media (min-width: 576px) {
+        padding: 10px 60px;
+      }
       &.active {
         color: $black;
       }
@@ -50,9 +53,11 @@
   .tab-content {
     background-color: white;
     border-radius: 10px;
-    padding: 60px;
     box-shadow: 0 12px 80px 0 rgba(114, 131, 147, 0.12);
-
+    padding: 60px 20px;
+    @media (min-width: 576px) {
+      padding: 60px;
+    }
     .tab-pane {
       min-height: 300px;
     }

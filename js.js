@@ -7,7 +7,6 @@ $(document).ready(function () {
 
   function checkValidity(form, step) {
     form.querySelectorAll('input[required]').forEach(input => {
-      console.log(input)
 
       input.addEventListener(('input'), () => {
         if (input.checkValidity()) {
@@ -74,7 +73,6 @@ $(document).ready(function () {
 
   $(".file-upload .btn").click(function () {
     $("#file").click();
-    console.log('toto')
   });
 
   $(function () {
