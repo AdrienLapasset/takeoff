@@ -1,12 +1,13 @@
 .btn {
   border-radius: 19px;
-  height: 49px;
-  padding: 0 30px;
+  min-height: 49px;
+  padding: 7px 30px;
   font-size: 14px;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 18px;
   &:hover {
     color: white;
   }
