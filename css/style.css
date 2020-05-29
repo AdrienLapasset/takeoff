@@ -548,6 +548,10 @@ footer .copyrights {
   text-align: center;
 }
 
+.form .form-container .nav .nav-item svg {
+  margin: auto;
+}
+
 .form .form-container .progress-bar-container {
   height: 2px;
   width: 100%;
@@ -737,6 +741,100 @@ footer .copyrights {
 
 .form h3 {
   font-size: 13px;
+}
+
+.form .file-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0 40px 0;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .form .file-status {
+    margin: 20px 0 40px 15px;
+    width: 400px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.form .file-status.error {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .form .file-status.error {
+    margin: 20px 0 40px 0;
+    width: 550px;
+  }
+}
+
+.form .file-status.error img {
+  margin: 0 15px;
+}
+
+.form .file-status .progress-bar {
+  margin: 0 15px;
+  width: 90px;
+  height: 6px;
+  background-color: #ebf1f4;
+  border-radius: 8px;
+}
+
+.form .file-status .progress-bar .bar {
+  width: 70%;
+  height: 6px;
+  border-radius: 8px 0 0 8px;
+  background-color: #31e1a9;
+}
+
+.form .file-status img {
+  width: 12px;
+  cursor: pointer;
+}
+
+.form .file-status span {
+  color: #728393;
+  margin: 0 15px;
+}
+
+.form .file-status .error {
+  background-color: #feedf0;
+  padding: 10px 15px;
+  color: #fb4064;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: auto;
+}
+
+@media (min-width: 992px) {
+  .form .file-status .error {
+    width: 400px;
+  }
+}
+
+.form .file-status .error span {
+  color: #fb4064;
+  margin: 0 0 0 15px;
+}
+
+.form .file-status .btn {
+  color: #893ae3;
+  padding: 0;
 }
 
 .login {
