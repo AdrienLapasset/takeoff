@@ -145,14 +145,56 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-primary mt-5 mx-auto">
+          <button class="btn btn-primary mt-5 mx-auto" type="button" data-toggle="modal" data-target="#howToSendModal">
             Comment renvoyer<br>
             mes documents ?
           </button>
         </div>
       </div>
-
     </div>
+
+    <!-- MODAL Comment renvoyer mes documents ?  -->
+    <div class="modal fade" id="howToSendModal" tabindex="-1" role="dialog" aria-labelledby="howToSendModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <img class="mb-2" src="/assets/icons/close.svg" alt="">
+          Fermer
+        </button>
+        <div class="modal-content">
+          <h5 class="modal-title mb-5" id="exampleModalLabel">Comment renvoyer mes documents&nbsp;?</h5>
+          <div>
+            <div class="step">
+              <img src="/assets/imgs/espace-suivi.svg" alt="">
+              <div class="d-flex flex-column">
+                <h6>Dans mon espace de suivi :</h6>
+                <p>Cliquez sur le bouton <span>« <u>Renvoyer</u> »</span><br>
+                  pour redéposer votre document.</p>
+              </div>
+            </div>
+            <div class="step">
+              <img src="/assets/imgs/envoyez-mail.svg" alt="">
+              <div class="d-flex flex-column">
+                <h6>Envoyez un mail à :</h6>
+                <p>service.consommateur@take-off.fr <br>
+                  avec le numéro de l’offre : xxxx <br>
+                  et le numéro de participation : xxxxxxxxxxxxx</p>
+              </div>
+            </div>
+            <div class="step">
+              <img src="/assets/imgs/envoyez-courrier.svg" alt="">
+              <div class="d-flex flex-column">
+                <h6>Envoyez un courrier à l’adresse :</h6>
+                <p>TAKE OFF N° XXXX <br>
+                  à l’attention du service consommateur <br>
+                  CS 50454 <br>
+                  13096 Aix-en-Provence Cedex 2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End MODAL Comment renvoyer mes documents ?  -->
   </div>
 
   <footer>

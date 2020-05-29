@@ -160,6 +160,55 @@ form .custom-checkbox .custom-control-label {
   border-top-color: white;
 }
 
+.modal {
+  background-color: rgba(73, 22, 131, 0.8);
+}
+
+@media (min-width: 992px) {
+  .modal .modal-dialog {
+    max-width: 980px;
+  }
+}
+
+.modal .close {
+  color: white;
+  font-size: 12px;
+  text-shadow: none;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: -70px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.modal .modal-content {
+  padding: 40px 80px;
+  border-radius: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-content h5 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 header .navbar {
   padding: 0;
 }
@@ -291,55 +340,6 @@ header .contact-popup .icon {
   max-width: 400px;
   color: #728393;
   line-height: 24px;
-}
-
-.home .modal {
-  background-color: rgba(73, 22, 131, 0.8);
-}
-
-@media (min-width: 992px) {
-  .home .modal .modal-dialog {
-    max-width: 980px;
-  }
-}
-
-.home .modal .close {
-  color: white;
-  font-size: 12px;
-  text-shadow: none;
-  font-weight: 400;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  right: -70px;
-  opacity: 1;
-  cursor: pointer;
-}
-
-.home .modal .modal-content {
-  padding: 40px 80px;
-  border-radius: 26px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.home .modal .modal-content h5 {
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 30px;
 }
 
 .home .modal .modal-content .steps {
@@ -872,10 +872,27 @@ footer .copyrights {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin-bottom: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 992px) {
+  .login .tab-content .refusal {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-bottom: 5px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .login .tab-content .refusal span {
@@ -893,5 +910,77 @@ footer .copyrights {
 
 .login .tab-content .refusal .btn:hover {
   text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+  .login .modal .close {
+    right: 100px;
+  }
+}
+
+.login .modal .modal-content {
+  max-width: 642px;
+  margin: auto;
+  padding: 60px;
+}
+
+.login .modal .modal-content .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .login .modal .modal-content .step {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.login .modal .modal-content .step h6 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login .modal .modal-content .step p {
+  font-size: 13px;
+  color: #728393;
+}
+
+.login .modal .modal-content .step p span {
+  color: #893ae3;
+}
+
+.login .modal .modal-content .step:nth-child(1) img {
+  margin: 30px;
+}
+
+@media (min-width: 992px) {
+  .login .modal .modal-content .step:nth-child(1) img {
+    margin: 0 40px;
+  }
+}
+
+.login .modal .modal-content .step:nth-child(2) img {
+  margin-right: 15px;
+}
+
+.login .modal .modal-content .step:nth-child(3) img {
+  margin: 40px 0 20px;
+}
+
+@media (min-width: 992px) {
+  .login .modal .modal-content .step:nth-child(3) img {
+    margin: 0 40px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

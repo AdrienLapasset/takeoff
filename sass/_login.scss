@@ -102,7 +102,6 @@
         flex-direction: row;
         align-items: center;
         flex: 0 0 50px;
-
         @media (min-width: 992px) {
           flex-direction: column;
           flex: 0 0 25%;
@@ -138,8 +137,15 @@
     .refusal {
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 5px;
+      flex-direction: column;
+      margin-bottom: 15px;
+      align-items: center;
+
+      @media (min-width: 992px) {
+        align-items: flex-end;
+        margin-bottom: 5px;
+        flex-direction: row;
+      }
       span {
         color: $grey-dark;
         margin-left: 10px;
@@ -152,6 +158,58 @@
         color: $brand;
         &:hover {
           text-decoration: underline;
+        }
+      }
+    }
+  }
+  .modal {
+    .close {
+      @media (min-width: 992px) {
+        right: 100px;
+      }
+    }
+    .modal-content {
+      max-width: 642px;
+      margin: auto;
+      padding: 60px;
+      .step {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @media (min-width: 992px) {
+          flex-direction: row;
+        }
+        h6 {
+          font-size: 14px;
+          font-weight: 600;
+        }
+        p {
+          font-size: 13px;
+          color: $grey-dark;
+          span {
+            color: $brand;
+          }
+        }
+        &:nth-child(1) {
+          img {
+            margin: 30px;
+            @media (min-width: 992px) {
+              margin: 0 40px;
+            }
+          }
+        }
+        &:nth-child(2) {
+          img {
+            margin-right: 15px;
+          }
+        }
+        &:nth-child(3) {
+          img {
+            margin: 40px 0 20px;
+            @media (min-width: 992px) {
+              margin: 0 40px;
+            }
+          }
         }
       }
     }
