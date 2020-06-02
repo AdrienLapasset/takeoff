@@ -14,21 +14,49 @@
 
 
 <body>
+
   <header>
     <div class="container">
       <nav class="navbar navbar-expand-lg">
-        <img src="/assets/imgs/random-logo.svg" class="brand-logo" alt="">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <img src="/assets/icons/navbar-toggler.svg" alt="">
-        </button>
+        <img src="/assets/imgs/random-logo.svg" class="brand-logo" alt="Logo">
+        <button class="btn btn-primary navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link" href="#">Accueil</a>
             <a class="nav-item nav-link" href="#">Modalités</a>
             <a href="" class="nav-item nav-link home-icon">
-              <img src="/assets/icons/account.svg" alt="">
-            </a>
-            <a class="nav-item nav-link" href="#">Contacts</a>
+              <img src="/assets/icons/account.svg" alt="Accueil">
+            </a> <span class="nav-item nav-link contact" href="#">Contacts
+              <div class="contact-popup">
+                <div class="d-flex  mb-2">
+                  <div class="icon">
+                    <img src="/assets/icons/email.svg" alt="Email">
+                  </div>
+                  <p><b>Par mail : <a href="mailto:name@email.com">service consommateur</a> </b><br />
+                    en précisant le numéro de l’offre<br />
+                    et le numéro de participation.
+                  </p>
+                </div>
+                <div class="d-flex mb-2">
+                  <div class="icon">
+                    <img src="/assets/icons/courrier.svg" alt="Par courrier :">
+                  </div>
+                  <p><b>Par courrier :</b><br />
+                    TAKE OFF N° XXXX<br />
+                    à l’attention du service consommateur<br />
+                    CS 50454<br />
+                    13096 Aix-en-Provence Cedex 2
+                  </p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="icon">
+                    <img src="/assets/icons/tel.svg" alt="Par téléphone">
+                  </div>
+                  <p class="mb-0"><b>Par téléphone :</b><br class="d-lg-none"> 04 84 49 29 00
+                  </p>
+                </div>
+              </div>
+            </span>
           </div>
         </div>
       </nav>
@@ -49,7 +77,7 @@
                 <p>Votre remboursement sera effectué par <b>virement bancaire</b>. 
                 Merci d’indiquer votre IBAN figurant sur votre RIB.</p>
                 <p>Un IBAN/BIC permet uniquement d’effectuer des virements sur votre compte. Ce site garantit la <b>protection de des informations</b> saisies (vos données sont chiffrées puis envoyées de manière sécurisée au serveur).</p>
-                <p>Vos coordonnées seront uniquement utilisées pour répondre à votre demande et ne seront ni stockées, ni utilisées à d’autres fins.</p>" src="/assets/icons/info.svg" alt="">
+                <p>Vos coordonnées seront uniquement utilisées pour répondre à votre demande et ne seront ni stockées, ni utilisées à d’autres fins.</p>" src="/assets/icons/info.svg" alt="Informations">
             </div>
             <input placeholder="johndoe@gmail.com" type="text" class="form-control" id="firstName">
             <div class="invalid-feedback">
@@ -64,7 +92,7 @@
                 <p>Votre remboursement sera effectué par <b>virement bancaire</b>. 
                 Merci d’indiquer votre IBAN figurant sur votre RIB.</p>
                 <p>Un IBAN/BIC permet uniquement d’effectuer des virements sur votre compte. Ce site garantit la <b>protection de des informations</b> saisies (vos données sont chiffrées puis envoyées de manière sécurisée au serveur).</p>
-                <p>Vos coordonnées seront uniquement utilisées pour répondre à votre demande et ne seront ni stockées, ni utilisées à d’autres fins.</p>" src="/assets/icons/info.svg" alt="">
+                <p>Vos coordonnées seront uniquement utilisées pour répondre à votre demande et ne seront ni stockées, ni utilisées à d’autres fins.</p>" src="/assets/icons/info.svg" alt="Informations">
             </div>
             <input placeholder="johndoe@gmail.com" type="text" class="form-control" id="firstName">
             <div class="invalid-feedback">
@@ -111,20 +139,20 @@
       <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center mt-5">
         <div class="d-flex">
           <a class="social-btn" href="">
-            <img src="/assets/icons/facebook.svg" alt="">
+            <img src="/assets/icons/facebook.svg" alt="facebook">
           </a>
           <a class="social-btn" href="">
-            <img src="/assets/icons/twitter.svg" alt="">
+            <img src="/assets/icons/twitter.svg" alt="twitter">
           </a>
           <a class="social-btn" href="">
-            <img src="/assets/icons/linkedin.svg" alt="">
+            <img src="/assets/icons/linkedin.svg" alt="linkedin">
           </a>
           <a class="social-btn" href="">
-            <img src="/assets/icons/google+.svg" alt="">
+            <img src="/assets/icons/google+.svg" alt="google+">
           </a>
         </div>
         <p class="copyrights">© 2020 Tous droits réservés Take off</p>
-        <img src="/assets/imgs/random-logo.svg" class="brand-logo" alt="">
+        <img src="/assets/imgs/random-logo.svg" class="brand-logo" alt="Logo">
       </div>
     </div>
   </footer>

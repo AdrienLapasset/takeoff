@@ -17,18 +17,45 @@
   <header>
     <div class="container">
       <nav class="navbar navbar-expand-lg">
-        <img src="/assets/imgs/random-logo.svg" class="brand-logo" alt="">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <img src="/assets/icons/navbar-toggler.svg" alt="">
-        </button>
+        <img src="/assets/imgs/random-logo.svg" class="brand-logo" alt="Logo">
+        <button class="btn btn-primary navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link" href="#">Accueil</a>
             <a class="nav-item nav-link" href="#">Modalités</a>
             <a href="" class="nav-item nav-link home-icon">
-              <img src="/assets/icons/account.svg" alt="">
-            </a>
-            <a class="nav-item nav-link" href="#">Contacts</a>
+              <img src="/assets/icons/account.svg" alt="Accueil">
+            </a> <span class="nav-item nav-link contact" href="#">Contacts
+              <div class="contact-popup">
+                <div class="d-flex  mb-2">
+                  <div class="icon">
+                    <img src="/assets/icons/email.svg" alt="Email">
+                  </div>
+                  <p><b>Par mail : <a href="mailto:name@email.com">service consommateur</a> </b><br />
+                    en précisant le numéro de l’offre<br />
+                    et le numéro de participation.
+                  </p>
+                </div>
+                <div class="d-flex mb-2">
+                  <div class="icon">
+                    <img src="/assets/icons/courrier.svg" alt="Par courrier :">
+                  </div>
+                  <p><b>Par courrier :</b><br />
+                    TAKE OFF N° XXXX<br />
+                    à l’attention du service consommateur<br />
+                    CS 50454<br />
+                    13096 Aix-en-Provence Cedex 2
+                  </p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="icon">
+                    <img src="/assets/icons/tel.svg" alt="Par téléphone">
+                  </div>
+                  <p class="mb-0"><b>Par téléphone :</b><br class="d-lg-none"> 04 84 49 29 00
+                  </p>
+                </div>
+              </div>
+            </span>
           </div>
         </div>
       </nav>
@@ -69,7 +96,7 @@
               </div>
             </div>
             <div class="d-flex align-items-center my-5 my-lg-0">
-              <img class="m-auto" src="/assets/imgs/mes-infos.svg" alt="">
+              <img class="m-auto" src="/assets/imgs/mes-infos.svg" alt="Mes infos">
             </div>
             <div class="d-flex flex-column justify-content-between">
               <div class="mb-4">
@@ -103,20 +130,20 @@
             <div class="steps">
               <div class="step">
                 <div class="icon checked">
-                  <img src="/assets/icons/check.svg" alt="">
+                  <img src="/assets/icons/check.svg" alt="Validé">
                 </div>
                 Inscription
               </div>
               <div class="step">
                 <div class="icon checked">
-                  <img src="/assets/icons/check.svg" alt="">
+                  <img src="/assets/icons/check.svg" alt="Validé">
                 </div>
                 Traitement<br>
                 de ma demande
               </div>
               <div class="step">
                 <div class="icon error">
-                  <img src="/assets/icons/close.svg" alt="">
+                  <img src="/assets/icons/close.svg" alt="Validé">
                 </div>
                 Demande<br>
                 refusée
@@ -131,14 +158,14 @@
             <div>
               <div class="refusal">
                 <div class="d-flex align-items-end">
-                  <img src="/assets/icons/warning.svg" alt="">
+                  <img src="/assets/icons/warning.svg" alt="Attention">
                   <span>Facture d’achat illisible</span>
                 </div>
                 <button class="btn btn-tracking">Renvoyer</button>
               </div>
               <div class="refusal">
                 <div class="d-flex align-items-end">
-                  <img src="/assets/icons/warning.svg" alt="">
+                  <img src="/assets/icons/warning.svg" alt="Attention">
                   <span>Code-non non découpé</span>
                 </div>
                 <button class="btn btn-tracking">Renvoyer</button>
@@ -157,14 +184,14 @@
     <div class="modal fade" id="howToSendModal" tabindex="-1" role="dialog" aria-labelledby="howToSendModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <img class="mb-2" src="/assets/icons/close.svg" alt="">
+          <img class="mb-2" src="/assets/icons/close.svg" alt="Fermer">
           Fermer
         </button>
         <div class="modal-content">
           <h5 class="modal-title mb-5" id="exampleModalLabel">Comment renvoyer mes documents&nbsp;?</h5>
           <div>
             <div class="step">
-              <img src="/assets/imgs/espace-suivi.svg" alt="">
+              <img src="/assets/imgs/espace-suivi.svg" alt="Dans mon espace de suivi">
               <div class="d-flex flex-column">
                 <h6>Dans mon espace de suivi :</h6>
                 <p>Cliquez sur le bouton <span>« <u>Renvoyer</u> »</span><br>
@@ -172,7 +199,7 @@
               </div>
             </div>
             <div class="step">
-              <img src="/assets/imgs/envoyez-mail.svg" alt="">
+              <img src="/assets/imgs/envoyez-mail.svg" alt="Envoyez un mail à">
               <div class="d-flex flex-column">
                 <h6>Envoyez un mail à :</h6>
                 <p>service.consommateur@take-off.fr <br>
@@ -181,7 +208,7 @@
               </div>
             </div>
             <div class="step">
-              <img src="/assets/imgs/envoyez-courrier.svg" alt="">
+              <img src="/assets/imgs/envoyez-courrier.svg" alt="Envoyez un courrier à l’adresse">
               <div class="d-flex flex-column">
                 <h6>Envoyez un courrier à l’adresse :</h6>
                 <p>TAKE OFF N° XXXX <br>
@@ -229,20 +256,20 @@
       <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center mt-5">
         <div class="d-flex">
           <a class="social-btn" href="">
-            <img src="/assets/icons/facebook.svg" alt="">
+            <img src="/assets/icons/facebook.svg" alt="facebook">
           </a>
           <a class="social-btn" href="">
-            <img src="/assets/icons/twitter.svg" alt="">
+            <img src="/assets/icons/twitter.svg" alt="twitter">
           </a>
           <a class="social-btn" href="">
-            <img src="/assets/icons/linkedin.svg" alt="">
+            <img src="/assets/icons/linkedin.svg" alt="linkedin">
           </a>
           <a class="social-btn" href="">
-            <img src="/assets/icons/google+.svg" alt="">
+            <img src="/assets/icons/google+.svg" alt="google+">
           </a>
         </div>
         <p class="copyrights">© 2020 Tous droits réservés Take off</p>
-        <img src="/assets/imgs/random-logo.svg" class="brand-logo" alt="">
+        <img src="/assets/imgs/random-logo.svg" class="brand-logo" alt="Logo">
       </div>
     </div>
   </footer>

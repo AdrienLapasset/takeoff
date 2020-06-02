@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  $('#tab2').tab('show')
 
   document.querySelectorAll('.form-step').forEach((form, id) => {
     let step = id + 1
