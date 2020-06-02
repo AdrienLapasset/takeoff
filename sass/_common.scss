@@ -83,9 +83,16 @@ form {
     font-size: 12px;
   }
   .custom-checkbox {
-    .custom-control-input:checked ~ .custom-control-label::before {
-      background-color: $brand;
-      border-color: $brand;
+    .custom-control-input {
+      &:checked ~ .custom-control-label::before {
+        background-color: $brand;
+        border-color: $brand;
+      }
+      &.is-valid {
+        & ~ .custom-control-label {
+          color: $grey-dark;
+        }
+      }
     }
     .custom-control-label {
       color: $grey-dark;

@@ -138,6 +138,10 @@ form .custom-checkbox .custom-control-input:checked ~ .custom-control-label::bef
   border-color: #893ae3;
 }
 
+form .custom-checkbox .custom-control-input.is-valid ~ .custom-control-label {
+  color: #728393;
+}
+
 form .custom-checkbox .custom-control-label {
   color: #728393;
   padding: 3px;

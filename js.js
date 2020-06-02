@@ -7,7 +7,6 @@ $(document).ready(function () {
 
   function checkValidity(form, step) {
     form.querySelectorAll('input[required]').forEach(input => {
-
       input.addEventListener(('input'), () => {
         if (input.checkValidity()) {
           input.classList.remove('is-invalid')
