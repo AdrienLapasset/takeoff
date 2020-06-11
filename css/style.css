@@ -550,6 +550,7 @@ footer .copyrights {
   display: -ms-flexbox;
   display: flex;
   padding: 10px 0;
+  height: 60px;
 }
 
 .form .form-container .nav .icon-grey {
@@ -586,10 +587,10 @@ footer .copyrights {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.form .form-container .nav .nav-link svg {
-  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
 }
 
 .form .form-container .progress-bar-container {

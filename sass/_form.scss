@@ -28,6 +28,7 @@
     .nav {
       display: flex;
       padding: 10px 0;
+      height: 60px;
       .icon-grey {
         fill: $grey;
         stroke: $grey;
@@ -49,9 +50,8 @@
         display: flex;
         flex: 0 0 33.33%;
         justify-content: center;
-        svg {
-          margin: auto;
-        }
+        align-items: center;
+        padding: 0;
       }
     }
     .progress-bar-container {

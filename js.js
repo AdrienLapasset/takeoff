@@ -1,16 +1,19 @@
 $(document).ready(function () {
 
-  // $('#tab3').tab('show')
+  // IE11 pollyfill
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
 
-  document.querySelectorAll('.form-step').forEach((form, id) => {
+  document.querySelectorAll('.form-step').forEach(function (form, id) {
     let step = id + 1
     checkValidity(form, step)
   })
 
   function checkValidity(form, step) {
-    form.querySelectorAll('input[required]').forEach(input => {
+    form.querySelectorAll('input[required]').forEach(function (input) {
       if (step === 3) {
-        input.addEventListener(('input'), () => {
+        input.addEventListener(('input'), function () {
           if (input.checkValidity()) {
             input.classList.remove('is-invalid')
             input.classList.add('is-valid');
@@ -22,7 +25,7 @@ $(document).ready(function () {
           $('#submitBtn' + step).attr("disabled", !is_valid);
         });
       } else {
-        input.addEventListener(('blur'), () => {
+        input.addEventListener(('blur'), function () {
           if (input.checkValidity()) {
             input.classList.remove('is-invalid')
             input.classList.add('is-valid');
@@ -38,21 +41,21 @@ $(document).ready(function () {
   }
 
   // Form submits management
-  $(document).on('submit', '#form1', () => {
+  $(document).on('submit', '#form1', function () {
     $('#tab2').tab('show');
     $(onTab2);
     window.scrollTo(0, 0);
     return false;
   });
 
-  $(document).on('submit', '#form2', () => {
+  $(document).on('submit', '#form2', function () {
     $('#tab3').tab('show');
     $(onTab3);
     window.scrollTo(0, 0);
     return false;
   });
 
-  $(document).on('submit', '#form3', () => {
+  $(document).on('submit', '#form3', function () {
     $('.form-container').hide()
     $('#feedback').show()
     window.scrollTo(0, 0);
@@ -133,5 +136,7 @@ $(document).ready(function () {
 
   // DatePicker
   $.datepicker.setDefaults($.datepicker.regional[""]);
-  $("#datepicker").datepicker($.datepicker.regional["fr"]);
+  document.querySelectorAll('#datepicker').forEach(function (dp) {
+    $(dp).datepicker($.datepicker.regional["fr"]);
+  })
 })
