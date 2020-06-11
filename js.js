@@ -111,10 +111,8 @@ $(document).ready(function () {
     $("#file").click();
   });
 
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
-
+  // Tooltips
+  $('[data-toggle="tooltip"]').tooltip()
 
   // DatePicker
   $.datepicker.setDefaults($.datepicker.regional[""]);

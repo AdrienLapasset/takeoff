@@ -97,10 +97,6 @@ a.nav-link:hover {
   max-height: 70px;
 }
 
-.custom-tooltip {
-  padding-top: 5px;
-}
-
 form .form-control {
   border-radius: 16px;
   border-color: #cdd6de;
@@ -156,6 +152,10 @@ form .custom-control-label {
   cursor: pointer;
 }
 
+.custom-tooltip {
+  padding-top: 5px;
+}
+
 .tooltip .tooltip-inner {
   opacity: 1;
   background-color: white;
@@ -183,12 +183,11 @@ form .custom-control-label {
 
 @media (min-width: 992px) {
   .modal .modal-dialog {
-    max-width: 980px;
+    max-width: 850px;
   }
 }
 
 .modal .close {
-  color: white;
   font-size: 12px;
   text-shadow: none;
   font-weight: 400;
@@ -203,9 +202,20 @@ form .custom-control-label {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  right: -70px;
   opacity: 1;
   cursor: pointer;
+  right: 20px;
+  top: 20px;
+  z-index: 1;
+  color: #cdd6de;
+}
+
+@media (min-width: 768px) {
+  .modal .close {
+    right: -70px;
+    top: unset;
+    color: white;
+  }
 }
 
 .modal .modal-content {
@@ -305,7 +315,7 @@ header .contact-popup {
   left: 0;
   top: 50px;
   padding: 30px 20px 30px 0;
-  z-index: 1;
+  z-index: 2;
   line-height: 18px;
   color: #24285b;
 }
