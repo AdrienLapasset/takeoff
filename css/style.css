@@ -1149,7 +1149,7 @@ footer .copyrights {
 
 @media (min-width: 992px) {
   .login .modal .close {
-    right: 100px;
+    right: 40px;
   }
 }
 
