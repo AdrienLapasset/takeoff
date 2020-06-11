@@ -146,6 +146,18 @@ form .custom-checkbox .custom-control-input.is-invalid ~ .custom-control-label::
   border-color: #893ae3 !important;
 }
 
+form .custom-checkbox .custom-control-input:focus:before {
+  -webkit-box-shadow: unset !important;
+          box-shadow: unset !important;
+  border-color: #893ae3 !important;
+}
+
+form .custom-checkbox .custom-control-input:before {
+  -webkit-box-shadow: unset !important;
+          box-shadow: unset !important;
+  border-color: #893ae3 !important;
+}
+
 form .custom-control-label {
   color: #728393;
   padding: 3px;

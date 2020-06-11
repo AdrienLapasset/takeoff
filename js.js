@@ -9,17 +9,31 @@ $(document).ready(function () {
 
   function checkValidity(form, step) {
     form.querySelectorAll('input[required]').forEach(input => {
-      input.addEventListener(('blur'), () => {
-        if (input.checkValidity()) {
-          input.classList.remove('is-invalid')
-          input.classList.add('is-valid');
-        } else {
-          input.classList.remove('is-valid')
-          input.classList.add('is-invalid');
-        }
-        let is_valid = $('#form' + step + ' input[required]').length === $('#form' + step + ' input[required].is-valid').length;
-        $('#submitBtn' + step).attr("disabled", !is_valid);
-      });
+      if (step === 3) {
+        input.addEventListener(('input'), () => {
+          if (input.checkValidity()) {
+            input.classList.remove('is-invalid')
+            input.classList.add('is-valid');
+          } else {
+            input.classList.remove('is-valid')
+            input.classList.add('is-invalid');
+          }
+          let is_valid = $('#form' + step + ' input[required]').length === $('#form' + step + ' input[required].is-valid').length;
+          $('#submitBtn' + step).attr("disabled", !is_valid);
+        });
+      } else {
+        input.addEventListener(('blur'), () => {
+          if (input.checkValidity()) {
+            input.classList.remove('is-invalid')
+            input.classList.add('is-valid');
+          } else {
+            input.classList.remove('is-valid')
+            input.classList.add('is-invalid');
+          }
+          let is_valid = $('#form' + step + ' input[required]').length === $('#form' + step + ' input[required].is-valid').length;
+          $('#submitBtn' + step).attr("disabled", !is_valid);
+        });
+      }
     })
   }
 
@@ -82,6 +96,8 @@ $(document).ready(function () {
   function onTab3() {
     $('.progress-bar').css("width", "83%")
     $('#shop-icon').addClass("icon-grey")
+    $('#shop-icon').css("display", "block")
+    $('#shop-text').css("display", "none")
     $('#validation-icon').css("display", "block")
     $('#validation-text').css("display", "none")
   }
@@ -107,8 +123,9 @@ $(document).ready(function () {
     $(".file-upload").removeClass("drag-over");
   });
 
-  $(".file-upload .btn").click(function () {
+  $(".file-upload .btn").click(function (e) {
     $("#file").click();
+    e.preventDefault();
   });
 
   // Tooltips

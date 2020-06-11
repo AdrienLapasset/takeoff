@@ -97,8 +97,19 @@ form {
           }
         }
       }
+      &:focus {
+        &:before {
+          box-shadow: unset !important;
+          border-color: $brand !important;
+        }
+      }
+      &:before {
+        box-shadow: unset !important;
+        border-color: $brand !important;
+      }
     }
   }
+
   .custom-control-label {
     color: $grey-dark;
     padding: 3px;
