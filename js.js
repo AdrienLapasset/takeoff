@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+  // $('#tab3').tab('show')
+
   document.querySelectorAll('.form-step').forEach((form, id) => {
     let step = id + 1
     checkValidity(form, step)
@@ -7,7 +9,7 @@ $(document).ready(function () {
 
   function checkValidity(form, step) {
     form.querySelectorAll('input[required]').forEach(input => {
-      input.addEventListener(('input'), () => {
+      input.addEventListener(('blur'), () => {
         if (input.checkValidity()) {
           input.classList.remove('is-invalid')
           input.classList.add('is-valid');
@@ -21,22 +23,17 @@ $(document).ready(function () {
     })
   }
 
+  // Form submits management
   $(document).on('submit', '#form1', () => {
-    $('#tab2').tab('show')
-    $('.progress-bar').css("width", "50%")
-    $('#acount-icon').addClass("icon-grey")
-    $('#shop-icon').css("display", "block")
-    $('#shop-text').css("display", "none")
+    $('#tab2').tab('show');
+    $(onTab2);
     window.scrollTo(0, 0);
     return false;
   });
 
   $(document).on('submit', '#form2', () => {
-    $('#tab3').tab('show')
-    $('.progress-bar').css("width", "83%")
-    $('#shop-icon').addClass("icon-grey")
-    $('#validation-icon').css("display", "block")
-    $('#validation-text').css("display", "none")
+    $('#tab3').tab('show');
+    $(onTab3);
     window.scrollTo(0, 0);
     return false;
   });
@@ -48,6 +45,45 @@ $(document).ready(function () {
     return false;
   });
 
+  // Tab events
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    console.log(e.target.id)
+    switch (e.target.id) {
+      case 'tab1-tab':
+        $(onTab1);
+        break;
+      case 'tab2-tab':
+        $(onTab2);
+        break;
+      case 'tab3-tab':
+        $(onTab3);
+        break;
+      default:
+        break;
+    }
+  })
+
+  function onTab1() {
+    $('.progress-bar').css("width", "15.5%")
+    $('#shop-icon').css("display", "none")
+    $('#shop-text').css("display", "block")
+  }
+
+  function onTab2() {
+    $('.progress-bar').css("width", "50%")
+    $('#acount-icon').addClass("icon-grey")
+    $('#shop-icon').css("display", "block")
+    $('#shop-text').css("display", "none")
+    $('#validation-icon').css("display", "none")
+    $('#validation-text').css("display", "block")
+  }
+
+  function onTab3() {
+    $('.progress-bar').css("width", "83%")
+    $('#shop-icon').addClass("icon-grey")
+    $('#validation-icon').css("display", "block")
+    $('#validation-text').css("display", "none")
+  }
 
   // File upload drag and drop
   // https://makitweb.com/drag-and-drop-file-upload-with-jquery-and-ajax/

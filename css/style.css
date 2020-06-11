@@ -134,15 +134,23 @@ form label {
 }
 
 form .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  background-color: #893ae3;
-  border-color: #893ae3;
+  background-color: #893ae3 !important;
+  border-color: #893ae3 !important;
 }
 
 form .custom-checkbox .custom-control-input.is-valid ~ .custom-control-label {
   color: #728393;
 }
 
-form .custom-checkbox .custom-control-label {
+form .custom-checkbox .custom-control-input.is-invalid ~ .custom-control-label {
+  color: #728393;
+}
+
+form .custom-checkbox .custom-control-input.is-invalid ~ .custom-control-label::before {
+  border-color: #893ae3 !important;
+}
+
+form .custom-control-label {
   color: #728393;
   padding: 3px;
   cursor: pointer;
@@ -519,8 +527,6 @@ footer .copyrights {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   padding: 10px 0;
 }
 
@@ -548,11 +554,19 @@ footer .copyrights {
   }
 }
 
-.form .form-container .nav .nav-item {
-  text-align: center;
+.form .form-container .nav .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.33%;
+          flex: 0 0 33.33%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.form .form-container .nav .nav-item svg {
+.form .form-container .nav .nav-link svg {
   margin: auto;
 }
 

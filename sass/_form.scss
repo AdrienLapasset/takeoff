@@ -27,7 +27,6 @@
     }
     .nav {
       display: flex;
-      justify-content: space-around;
       padding: 10px 0;
       .icon-grey {
         fill: $grey;
@@ -46,8 +45,10 @@
           display: none;
         }
       }
-      .nav-item {
-        text-align: center;
+      .nav-link {
+        display: flex;
+        flex: 0 0 33.33%;
+        justify-content: center;
         svg {
           margin: auto;
         }

@@ -85,20 +85,28 @@ form {
   .custom-checkbox {
     .custom-control-input {
       &:checked ~ .custom-control-label::before {
-        background-color: $brand;
-        border-color: $brand;
+        background-color: $brand !important;
+        border-color: $brand !important;
       }
       &.is-valid {
         & ~ .custom-control-label {
           color: $grey-dark;
         }
       }
+      &.is-invalid {
+        & ~ .custom-control-label {
+          color: $grey-dark;
+          &::before {
+            border-color: $brand !important;
+          }
+        }
+      }
     }
-    .custom-control-label {
-      color: $grey-dark;
-      padding: 3px;
-      cursor: pointer;
-    }
+  }
+  .custom-control-label {
+    color: $grey-dark;
+    padding: 3px;
+    cursor: pointer;
   }
 }
 
