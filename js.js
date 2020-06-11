@@ -47,7 +47,6 @@ $(document).ready(function () {
 
   // Tab events
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-    console.log(e.target.id)
     switch (e.target.id) {
       case 'tab1-tab':
         $(onTab1);
@@ -67,6 +66,8 @@ $(document).ready(function () {
     $('.progress-bar').css("width", "15.5%")
     $('#shop-icon').css("display", "none")
     $('#shop-text').css("display", "block")
+    $('#validation-icon').css("display", "none")
+    $('#validation-text').css("display", "block")
   }
 
   function onTab2() {
@@ -114,4 +115,8 @@ $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
 
+
+  // DatePicker
+  $.datepicker.setDefaults($.datepicker.regional[""]);
+  $("#datepicker").datepicker($.datepicker.regional["fr"]);
 })
