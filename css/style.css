@@ -94,7 +94,7 @@ a.nav-link:hover {
 }
 
 .brand-logo {
-  max-height: 70px;
+  height: 70px;
 }
 
 form .form-control {
@@ -260,7 +260,7 @@ header .navbar .navbar-collapse {
 
 @media (min-width: 992px) {
   header .navbar .navbar-collapse {
-    background-color: unset;
+    background-color: transparent;
   }
 }
 
