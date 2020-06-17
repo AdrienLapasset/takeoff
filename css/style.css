@@ -102,6 +102,13 @@ form .form-control {
   border-color: #cdd6de;
   font-size: 12px;
   resize: none;
+  color: #cdd6de;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 992px) {
@@ -884,6 +891,40 @@ footer .copyrights {
   top: 10px;
 }
 
+.form .check-list {
+  position: relative;
+}
+
+.form .check-list .check-list-items {
+  padding: 5px 0;
+  display: none;
+  position: absolute;
+  background-color: white;
+  border-radius: 16px;
+  border: solid 1px #893ae3;
+  font-size: 12px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  top: 100%;
+}
+
+.form .check-list .check-list-items .custom-checkbox {
+  padding: 5px;
+  left: 30px;
+}
+
+.form .check-list:after {
+  position: absolute;
+  content: "";
+  top: 17px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #728393 transparent transparent transparent;
+}
+
 .login {
   background-image: url("/assets/imgs/login-bg.svg");
   background-size: cover;
@@ -1218,5 +1259,74 @@ footer .copyrights {
   .login .modal .modal-content .step:nth-child(3) img {
     margin: 0 40px;
   }
+}
+
+/* The container must be positioned relative: */
+.custom-select-container {
+  position: relative;
+  width: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #cdd6de;
+}
+
+.custom-select-container select {
+  display: none;
+  /*hide original SELECT element: */
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 17px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #728393 transparent transparent transparent;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #cdd6de;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: white;
+  border-radius: 16px;
+  border: solid 1px #893ae3;
+  font-size: 12px;
+  resize: none;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .select-items {
+    width: 280px;
+  }
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 /*# sourceMappingURL=style.css.map */

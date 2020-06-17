@@ -257,4 +257,40 @@
     right: 15px;
     top: 10px;
   }
+  .check-list {
+    position: relative;
+    .check-list-items {
+      padding: 5px 0;
+      display: none;
+      position: absolute;
+      background-color: white;
+      border-radius: 16px;
+      border: solid 1px $brand;
+      font-size: 12px;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      top: 100%;
+      .custom-checkbox {
+        padding: 5px;
+        left: 30px;
+      }
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      top: 17px;
+      right: 15px;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      border-color: $grey-dark transparent transparent transparent;
+    }
+
+    // /* Point the arrow upwards when the select box is open (active): */
+    // .select-selected.select-arrow-active:after {
+    //   border-color: transparent transparent $grey-dark transparent;
+    //   top: 10px;
+    // }
+  }
 }

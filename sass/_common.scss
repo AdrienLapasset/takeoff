@@ -60,6 +60,9 @@ form {
     border-color: $grey;
     font-size: 12px;
     resize: none;
+    color: $grey;
+    display: flex;
+    align-items: center;
     @media (min-width: 992px) {
       width: 280px;
     }
