@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  $('#tab2').tab('show');
-
 
   // IE11 pollyfill
   if (window.NodeList && !NodeList.prototype.forEach) {
