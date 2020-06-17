@@ -124,7 +124,7 @@
               <h1 class="mt-5">Mes informations personnelles</h1>
               <p class="instruction">Remplissez ce formulaire pour participer à notre offre..</p>
             </div>
-            <form class="form-step" id="form1">
+            <form class="form-step needs-validation" id="form1" novalidate>
               <div class="form-content">
 
                 <div class="custom-control custom-radio custom-control-inline mr-5">
@@ -254,7 +254,7 @@
                   <img class="mr-2" src="/assets/icons/chevron-left.svg" alt="Retour">
                   Retour
                 </a>
-                <button class="btn btn-form" id="submitBtn1" type="submit" disabled>Continuer</button>
+                <button class="btn btn-form" id="submitBtn1" type="submit">Continuer</button>
               </div>
             </form>
           </div>
@@ -264,7 +264,7 @@
           <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
             <h1 class="mt-5">Mes informations d’achats</h1>
             <p class="instruction">Remplissez les champs suivants pour poursuivre votre inscription</p>
-            <form class="form-step" id="form2">
+            <form class="form-step needs-validation" id="form2" novalidate>
               <div class="form-content">
 
 
@@ -420,7 +420,7 @@
                   <img class="mr-2" src="/assets/icons/chevron-left.svg" alt="Retour">
                   Retour
                 </button>
-                <button class="btn btn-form" id="submitBtn2" type="submit" disabled>Continuer</button>
+                <button class="btn btn-form" id="submitBtn2" type="submit">Continuer</button>
               </div>
             </form>
           </div>
@@ -429,7 +429,7 @@
           <!-- Validation de mon dossier -->
           <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
             <h1 class="mt-5">Validation de mon dossier</h1>
-            <form class="form-step" id="form3">
+            <form class="form-step needs-validation" id="form3" novalidate>
               <div class="form-content">
                 <p class="instruction text-left">Il vous reste une étape avant d’envoyer votre demande !<br />
                   Pour finaliser, merci de vérifier les informations déclarées ci-dessous et de valider votre demande en cliquant sur <span class="orange">« Valider mon inscription »</span></p>
@@ -483,7 +483,7 @@
                   <img class="mr-2" src="/assets/icons/chevron-left.svg" alt="Retour">
                   Retour
                 </button>
-                <button class="btn btn-form" id="submitBtn3" type="submit" disabled>Valider mon inscription</button>
+                <button class="btn btn-form" id="submitBtn3" type="submit">Valider mon inscription</button>
               </div>
             </form>
           </div>
@@ -569,6 +569,7 @@
 
   <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="/jquery.ui.datepicker-fr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

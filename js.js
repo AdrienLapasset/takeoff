@@ -5,61 +5,42 @@ $(document).ready(function () {
     NodeList.prototype.forEach = Array.prototype.forEach;
   }
 
-  document.querySelectorAll('.form-step').forEach(function (form, id) {
-    let step = id + 1
-    checkValidity(form, step)
-  })
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.getElementsByClassName('needs-validation');
+  // Loop over them and prevent submission
+  var validation = Array.prototype.filter.call(forms, function (form) {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
 
-  function checkValidity(form, step) {
-    form.querySelectorAll('input[required]').forEach(function (input) {
-      if (step === 3) {
-        input.addEventListener(('input'), function () {
-          if (input.checkValidity()) {
-            input.classList.remove('is-invalid')
-            input.classList.add('is-valid');
-          } else {
-            input.classList.remove('is-valid')
-            input.classList.add('is-invalid');
-          }
-          let is_valid = $('#form' + step + ' input[required]').length === $('#form' + step + ' input[required].is-valid').length;
-          $('#submitBtn' + step).attr("disabled", !is_valid);
-        });
-      } else {
-        input.addEventListener(('blur'), function () {
-          if (input.checkValidity()) {
-            input.classList.remove('is-invalid')
-            input.classList.add('is-valid');
-          } else {
-            input.classList.remove('is-valid')
-            input.classList.add('is-invalid');
-          }
-          let is_valid = $('#form' + step + ' input[required]').length === $('#form' + step + ' input[required].is-valid').length;
-          $('#submitBtn' + step).attr("disabled", !is_valid);
-        });
+      if (form.checkValidity() === false) {
+
+        var errorElements = document.querySelectorAll(
+          "input.form-control:invalid");
+
+        $('html, body').animate({
+          scrollTop: $(errorElements[0]).offset().top
+        }, 400);
+      } else if (form.id === 'form1') {
+        $("#tab1").removeClass("active");
+        $('#tab2').tab('show');
+        $(onTab2);
+        window.scrollTo(0, 0);
+        return false;
+      } else if (form.id === 'form2') {
+        $("#tab2").removeClass("active");
+        $('#tab3').tab('show');
+        $(onTab3);
+        window.scrollTo(0, 0);
+        return false;
+      } else if (form.id === 'form3') {
+        $('.form-container').hide()
+        $('#feedback').show()
+        window.scrollTo(0, 0);
+        return false;
       }
-    })
-  }
-
-  // Form submits management
-  $(document).on('submit', '#form1', function () {
-    $('#tab2').tab('show');
-    $(onTab2);
-    window.scrollTo(0, 0);
-    return false;
-  });
-
-  $(document).on('submit', '#form2', function () {
-    $('#tab3').tab('show');
-    $(onTab3);
-    window.scrollTo(0, 0);
-    return false;
-  });
-
-  $(document).on('submit', '#form3', function () {
-    $('.form-container').hide()
-    $('#feedback').show()
-    window.scrollTo(0, 0);
-    return false;
+      form.classList.add('was-validated');
+    }, false);
   });
 
   // Tab events
