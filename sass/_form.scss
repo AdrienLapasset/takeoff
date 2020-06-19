@@ -1,10 +1,12 @@
-.form {
+.form,
+.modalities {
   background-image: url("/assets/imgs/form-bg.svg");
   background-size: cover;
   background-position: top center;
   padding: 60px 0;
 
-  .form-container {
+  .form-container,
+  .modalities-container {
     background-color: white;
     border-radius: 26px;
     max-width: 980px;

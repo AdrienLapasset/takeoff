@@ -1,0 +1,33 @@
+.modalities {
+  .modalities-container {
+    padding: 15px;
+    max-width: unset;
+    @media (min-width: 992px) {
+      padding: 30px 120px;
+    }
+    .instruction {
+      margin-bottom: 60px;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 16px;
+      margin-top: 30px;
+    }
+    p {
+      color: $grey-dark;
+    }
+    ul {
+      padding-left: 30px;
+      li {
+        color: $grey-dark;
+        list-style-type: decimal;
+        ul {
+          padding-left: 30px;
+          li {
+            list-style-type: lower-alpha;
+          }
+        }
+      }
+    }
+  }
+}
